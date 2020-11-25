@@ -27,3 +27,15 @@ main {
   background-color: blanchedalmond;
   width: 100%;
 }
+
+section {
+  margin-left: 16px;
+}
+
+.clueListBox{
+  margin-bottom: 5px;
+}
+
+.clueListBox:last-of-type{
+  margin-bottom: 25px;
+}

@@ -3,7 +3,9 @@ import React from 'react'
 export const Display = () => {
     return (
         <div className="pages">
-            <p>Display</p>
+            <section>
+                <h2>Possible Ghosts</h2>
+            </section>
         </div>
     )
 }
