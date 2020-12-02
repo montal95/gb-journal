@@ -14,7 +14,8 @@ type Data = {
     ghosts: GhostList,
     filteredGhosts: GhostList,
     handleEvidence: (str: string) => {} | void,
-    updateFilter: () => {} | void
+    updateFilter: () => {} | void,
+    reset: () => {} | void
 }
 
 const initialValues: Data = {
@@ -22,12 +23,13 @@ const initialValues: Data = {
     ghosts: data.ghosts,
     filteredGhosts: data.ghosts,
     handleEvidence: () => ({}),
-    updateFilter: () => ({})
+    updateFilter: () => ({}),
+    reset: () => ({})
 }
 
 export const GlobalContext = createContext(initialValues);
 
-type Action = { type: "evidence" | "filter", payload: any }
+type Action = { type: "evidence" | "filter" | "reset", payload?: any }
 
 const reducer = (state: Data, action: Action) => {
     switch (action.type) {
@@ -35,6 +37,8 @@ const reducer = (state: Data, action: Action) => {
             return { ...state, clues: { ...state.clues, [action.payload]: !state.clues[action.payload] } };
         case "filter":
             return { ...state, filteredGhosts: action.payload }
+        case "reset":
+            return initialValues
         default:
             return state;
     }
@@ -70,7 +74,8 @@ export const GlobalProvider: React.FC = ({ children }) => {
             ghosts: state.ghosts,
             filteredGhosts: state.filteredGhosts,
             handleEvidence: (str: string) => dispatch({ type: "evidence", payload: str }),
-            updateFilter: () => filter()
+            updateFilter: () => filter(),
+            reset: () => dispatch({ type: "reset" })
         }}>
             {children}
         </GlobalContext.Provider>
