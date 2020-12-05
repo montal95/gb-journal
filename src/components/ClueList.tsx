@@ -6,7 +6,7 @@ export const ClueList = () => {
     return (
         <div className="pages">
             <section>
-                <h2>Clue List | <button onClick={() => reset()}>Reset</button></h2>
+                <h2>Clue List | <button id="reset" onClick={() => reset()}>Reset</button></h2>
                 {Object.keys(clues).map((clue: string) => {
                     const possible = filteredGhosts.some(ghost => ghost.clues.includes(clue))
 
