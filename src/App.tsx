@@ -6,14 +6,12 @@ import { GlobalProvider } from './components/GlobalContext'
 import './App.css';
 
 function App() {
-  // const {clues, ghosts} = data
-  // console.log(clues, ghosts)
   return (
     <GlobalProvider>
       <div className="App">
         <header>
           <h1>
-            Phasmophobia Mobile Journal
+            Phasmophobia Notepad
         </h1>
         </header>
         <main>
