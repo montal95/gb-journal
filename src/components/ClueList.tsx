@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from './GlobalContext'
-import ClueWrapper from './elements/ClueWrapper'
+import {ClueWrapper, PageHeaders} from './elements'
 
 
 export const ClueList = () => {
@@ -9,7 +9,7 @@ export const ClueList = () => {
     return (
         <div className="pages">
             <section>
-                <h2>Clue List | <button id="reset" onClick={() => reset()}>Reset</button></h2>
+                <PageHeaders>Clue List | <button id="reset" onClick={() => reset()}>Reset</button></PageHeaders>
                 <ClueWrapper>
                     {Object.keys(clues).map((clue: string) => {
                         const possibleCheck = filteredGhosts.some(ghost => ghost.clues.includes(clue))
@@ -18,7 +18,7 @@ export const ClueList = () => {
                             <button
                                 onMouseDown={() => handleEvidence(clue)}
                                 onMouseUp={() => updateFilter()}
-                                disabled={!possibleCheck} 
+                                disabled={!possibleCheck}
                                 key={clue}>
                                 <label>{clue}{clues[clue] ? " ✔" : ""}</label></ button>
                         )

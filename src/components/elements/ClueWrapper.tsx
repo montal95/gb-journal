@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ClueWrapper = styled.div`
+export const ClueWrapper = styled.div`
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
@@ -16,5 +16,3 @@ const ClueWrapper = styled.div`
             }
         }
     `;
-
-export default ClueWrapper

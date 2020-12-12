@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from './GlobalContext'
 import GhostInfo from './GhostInfo'
-
+import { PageHeaders } from './elements'
 
 export const Display = () => {
     const { filteredGhosts } = useContext(GlobalContext)
@@ -10,7 +10,7 @@ export const Display = () => {
     return (
         <div className="pages">
             <section>
-                <h2>{finalResult ? "Ghost Info" : "Possible Ghosts"}</h2>
+                <PageHeaders>{finalResult ? "Ghost Info" : "Possible Ghosts"}</PageHeaders>
                 {filteredGhosts.map((ghost) => (<p key={ghost.type}>{ghost.type}</p>))}
                 {finalResult ? <GhostInfo /> : ""}
             </section>

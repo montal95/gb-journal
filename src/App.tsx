@@ -1,19 +1,25 @@
 import React from 'react';
-// import { default as data } from './data.json'
 import { ClueList } from './components/ClueList'
 import { Display } from './components/Display'
 import { GlobalProvider } from './components/GlobalContext'
+import styled from 'styled-components';
 import './App.css';
 
-function App() {
+const Header = styled.header`
+  h1{
+    font-family: 'Pangolin', cursive;
+  }
+`
+
+const App = () => {
   return (
     <GlobalProvider>
       <div className="App">
-        <header>
+        <Header>
           <h1>
             Phasmophobia Notepad
-        </h1>
-        </header>
+          </h1>
+        </Header>
         <main>
           <ClueList />
           <Display />
