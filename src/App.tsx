@@ -1,9 +1,6 @@
 import React from 'react';
-import { ClueList } from './components/ClueList'
-import { Display } from './components/Display'
-import { GlobalProvider } from './components/GlobalContext'
+import { ClueList, Display, GlobalProvider } from './components'
 import styled from 'styled-components';
-import './App.css';
 
 const Header = styled.header`
   h1{

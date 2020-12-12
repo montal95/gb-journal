@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from './GlobalContext'
 
-const GhostInfo = () => {
+export const GhostInfo = () => {
     const { filteredGhosts } = useContext(GlobalContext)
 
     return (
@@ -11,5 +11,3 @@ const GhostInfo = () => {
         </div>
     )
 }
-
-export default GhostInfo;

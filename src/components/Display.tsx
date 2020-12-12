@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from './GlobalContext'
-import GhostInfo from './GhostInfo'
+import {GhostInfo} from './GhostInfo'
 import { PageHeaders } from './elements'
 
 export const Display = () => {
