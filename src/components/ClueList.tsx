@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from './GlobalContext'
-import {ClueWrapper, PageHeaders} from './elements'
+import { ClueWrapper, PageHeaders } from './elements'
+import {ClueButtons} from './ClueButtons'
 
 
 export const ClueList = () => {
-    const { clues, handleEvidence, updateFilter, filteredGhosts, reset } = useContext(GlobalContext)
+    const { clues, filteredGhosts, reset } = useContext(GlobalContext)
 
     return (
         <div className="pages">
@@ -15,12 +16,7 @@ export const ClueList = () => {
                         const possibleCheck = filteredGhosts.some(ghost => ghost.clues.includes(clue))
 
                         return (
-                            <button
-                                onMouseDown={() => handleEvidence(clue)}
-                                onMouseUp={() => updateFilter()}
-                                disabled={!possibleCheck}
-                                key={clue}>
-                                <label>{clue}{clues[clue] ? " ✔" : ""}</label></ button>
+                            <ClueButtons clue={clue} possibleCheck={possibleCheck} key={clue} />
                         )
                     })}
                 </ClueWrapper>

@@ -45,6 +45,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: blanchedalmond;
         min-width: 355px;
         margin: 0 10px 10px;
+        min-height: 385px;
     }
 
     section {
