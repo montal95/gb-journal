@@ -1,4 +1,4 @@
-import React, { Component, useContext } from 'react'
+import React, { useContext } from 'react'
 import { GlobalContext } from './GlobalContext'
 import {GhostInfo} from './GhostInfo'
 import { PageHeaders } from './elements'
