@@ -1,4 +1,16 @@
-export default {
+type GhostList = {
+  type: string,
+  clues: string[],
+  strengths: string,
+  weakness: string,
+}[]
+
+type Data = {
+  ghosts: GhostList,
+  clues: string[]
+}
+
+export const data: Data = {
   ghosts: [
     {
       type: "Banshee",

@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react';
-import { default as data } from '../data.json'
+import { data } from '../data';
 
 //defining the datatypes in the initial Values
 type GhostList = {
