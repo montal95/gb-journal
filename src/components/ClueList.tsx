@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from './GlobalContext'
-import { ClueWrapper, PageHeaders } from './elements'
+import { ClueWrapper, PageHeaders, ResetButton } from './elements'
 import {ClueButtons} from './ClueButtons'
 
 
@@ -10,7 +10,7 @@ export const ClueList = () => {
     return (
         <div className="pages">
             <section>
-                <PageHeaders>Clue List | <button id="reset" onClick={() => reset()}>Reset</button></PageHeaders>
+                <PageHeaders>Clue List | <ResetButton onClick={() => reset()}>Reset</ResetButton></PageHeaders>
                 <ClueWrapper>
                     {Object.keys(clues).map((clue: string) => {
                         const possibleCheck = filteredGhosts.some(ghost => ghost.clues.includes(clue))

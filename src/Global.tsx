@@ -53,15 +53,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     #reset {
-        background: none;
-        border: none;
-        padding: 0;
-        /*optional*/
-        font-family: arial, sans-serif;
-        /*input has OS specific font-family*/
-        color: #069;
-        text-decoration: underline;
-        cursor: pointer;
+        
     }
 
 `
