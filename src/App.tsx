@@ -5,6 +5,9 @@ import styled from 'styled-components';
 const Header = styled.header`
   h1{
     font-family: 'Pangolin', cursive;
+    font-size: 2.5rem;
+    min-width: 355px;
+    margin: 15px;
   }
 `
 

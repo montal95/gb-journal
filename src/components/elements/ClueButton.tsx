@@ -8,6 +8,7 @@ export const ClueButton = styled.button`
     background: transparent;
     position: relative;
     z-index: 1;
+    border-radius: 0.5em;
 
     &:disabled {
         text-decoration: line-through;

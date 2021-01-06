@@ -46,6 +46,7 @@ const GlobalStyle = createGlobalStyle`
         min-width: 355px;
         margin: 0 10px 10px;
         min-height: 385px;
+        border-radius: 0.5em;
     }
 
     section {
