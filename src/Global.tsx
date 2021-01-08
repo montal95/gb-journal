@@ -35,8 +35,8 @@ const GlobalStyle = createGlobalStyle`
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-template-rows: 1fr;
-        grid-column-gap: 16px;
-        grid-row-gap: 0px;
+        grid-column-gap: 6px;
+        grid-row-gap: 11px;
         max-width: 960px;
         margin: 0 auto;
     }
@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
     .pages {
         background-color: blanchedalmond;
         min-width: 350px;
-        margin: 0 auto 10px;
+        margin: 0 5px 5px;
         min-height: 385px;
         border-radius: 0.5em;
     }
