@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
     .pages {
         background-color: blanchedalmond;
         min-width: 350px;
-        margin: 0 10px 10px;
+        margin: 0 auto 10px;
         min-height: 385px;
         border-radius: 0.5em;
     }
