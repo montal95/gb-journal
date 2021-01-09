@@ -52,11 +52,6 @@ const GlobalStyle = createGlobalStyle`
     section {
         margin: 16px;
     }
-
-    #reset {
-        
-    }
-
 `
 
 export default GlobalStyle;
